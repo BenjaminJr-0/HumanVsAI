@@ -1,15 +1,18 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers, models
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from keras import layers, models
+from keras.src.legacy.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report
 import seaborn as sns
 import os
-
+import tensorflow as tf
+# Your TensorFlow code here
 # Set random seeds for reproducibility
 np.random.seed(42)
 tf.random.set_seed(42)
